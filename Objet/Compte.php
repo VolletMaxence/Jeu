@@ -6,7 +6,7 @@
         protected $_Mot_de_Passe;
         protected $_IDPerso;
         protected $_BDD;
-
+ 
 
         public function __construct($Username, $Password)
         {

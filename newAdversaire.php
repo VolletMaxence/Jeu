@@ -33,7 +33,7 @@
             echo get_class(json_decode($_POST["Adversaire"]));
    
             break;
-        
+         
         default:
             # code...
             break;

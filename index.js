@@ -11,7 +11,7 @@ function newUser(IDAdversaire, IDPerso)
         data : { ID: IDPerso, action: "setPlayer" },
 
         success : function(code_html, statut)
-        {
+        { 
             let userData = JSON.parse(code_html)
             document.getElementById("name").innerText = userData["_Nom"];
 

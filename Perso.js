@@ -38,7 +38,7 @@ function newUser(IDPerso)
 
             console.log(userData);
             user = code_html;
-
+ 
             //Cacher bouton
             document.getElementById("attaqueAdv").style.display = "none";
             document.getElementById("soinAdv").style.display = "none";

@@ -12,7 +12,7 @@
 
         <?php
             //Score
-
+ 
 
             //Aller dans la page d'acceuil
             if (isset($_POST["Acceuil"])) {

@@ -55,7 +55,7 @@
 
                     echo "<strong>".$_POST['PPseudo']."</strong> à été ajouter, il a <strong>".$_POST['PAttaque']."</strong> points d'attaque, <strong>".$_POST['PDefense']."</strong> point de défense et <strong>".$_POST['PSoin']."</strong> de puissance de soin. ";
 
-
+ 
                     //Obtenir l'ID du compte :
                     //Chercher le dernier fait :
                     $reqUtilisateur = "SELECT `ID` FROM utilisateur ORDER BY ID DESC";

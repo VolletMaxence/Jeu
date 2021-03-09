@@ -37,7 +37,7 @@
                         //refresh pour déco
                         echo "<script type='text/javascript'>document.location.replace('index.php');</script>";
                     }
-
+ 
                 //Aller dans la page de combat
                 if (isset($_POST["Combat"])) {
                     echo "<script type='text/javascript'>document.location.replace('Combat.php');</script>";

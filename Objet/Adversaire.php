@@ -131,7 +131,7 @@
         }
         echo json_encode(array('Nom' => $this->_Nom , 'Verif' =>  $VerifSoin , "hp" => $this->_Vie , "Soin" => $RealSoin));
     }
-
+ 
 
     //Renvoie la vie pour l'IA et choisir quel action faire
     public function ObtenirInfo()

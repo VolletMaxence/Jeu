@@ -18,7 +18,7 @@
                 <input type="submit" name='submit' value='Inscription'>
         
             </form>
-</div>
+</div> 
             <?php
             //si session existe pas :
             //connexion base : 

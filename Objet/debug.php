@@ -6,7 +6,7 @@
             //affichage des bouttons de choix
         ?>
             <!-- bouton d'attaque -->
-
+ 
             <!-- Case de texte -->
             <div id=Texte>
                 <p>

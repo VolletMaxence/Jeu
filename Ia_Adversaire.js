@@ -93,7 +93,7 @@ function Reponse_Monstre(IDAdversaire, IDPerso)
                 {
                     AttaqueAdv(IDAdversaire, IDPerso);
                 }
-            } 
+            }  
 
             //Si l'adversaire est en mauvaise posture : 
             else if (Adversaire["Vie"] <= 20 && Adversaire["Vie"] > 0)

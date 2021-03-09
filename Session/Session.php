@@ -31,7 +31,7 @@
                 <a href="Session/Inscription.php"> Créer un nouveau Compte + nouveau Perso </a>
             </div>
 
-            <?php
+            <?php 
             //si session existe pas :
             //connexion base : 
 

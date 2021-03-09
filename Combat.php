@@ -86,7 +86,7 @@
                     <form name="Retour" method="POST" id="Retour">
                         <input type="submit" name='Retour' id="Retour" value="Retourner à l'acceuil">
                     </form>
-                        
+                         
                         <?php
                             if(ISSET($_POST['Abandon']))
                             {

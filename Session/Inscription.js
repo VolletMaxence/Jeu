@@ -9,3 +9,4 @@ function AffichePerso(){
     document.getElementById("CreationPerso").style.display = "block";
     console.log("Le formulaire de création de Compte est caché")
 }
+ 

@@ -28,7 +28,7 @@
 
         case 'test':
             echo get_class(json_decode($_POST["Perso"]));
-   
+    
             break;
     }
 ?>
