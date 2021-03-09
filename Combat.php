@@ -92,13 +92,13 @@
                             {
                                 $Perso->scoreMoins($_SESSION['Connect']);
 
-                                echo "<script type='text/javascript'>document.location.replace('Acceuil.php');</script>";
+                                //echo "<script type='text/javascript'>document.location.replace('Acceuil.php');</script>";
                             }
                             if(ISSET($_POST['Retour']))
                             {
-                                $Perso->scoreMoins($_SESSION['Connect']);
+                                $Perso->scorePlus($_SESSION['Connect']);
 
-                                echo "<script type='text/javascript'>document.location.replace('Acceuil.php');</script>";
+                                //echo "<script type='text/javascript'>document.location.replace('Acceuil.php');</script>";
                             }
                         ?>
 

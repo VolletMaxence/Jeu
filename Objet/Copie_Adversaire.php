@@ -36,8 +36,8 @@
     //Avec les infos, créé une copie de l'adversaire et retourne son ID
     public function CreationCopie()
     {
-        $copie = "INSERT INTO `adversaire_copie`(`Nom`, `Vie`, `Attaque`, `Defense`, `Soin`) VALUES ('$this->_Nom',$this->_Vie,$this->_Attaque,$this->_Defense,$this->_Soin)";
-        $reponse = $this->_BDD->query($copie);
+        $req = "INSERT INTO `adversaire_copie`( `Nom`, `Vie`, `Attaque`, `Defense`, `Soin`) VALUES ('`$this->_Nom`,$this->_Vie,$this->_Attaque,$this->_Defense,$this->_Soin)";
+        $reponse = $this->_BDD->query($req);
 
         $IDCopie = "SELECT `ID` FROM adversaire_copie ORDER BY ID DESC";
         $ID = $this->_BDD->query($IDCopie);

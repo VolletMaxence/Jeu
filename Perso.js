@@ -95,8 +95,11 @@ function Attaque (IDAdversaire, IDPerso)
                 document.getElementById("PPerso2").innerText = `${AdvData["Nom"]} a été tuer bien joué !`;
 
                 //retourner a la page d'acceuil tout en soignant l'adversaire pour les prochaines fois 
-                //Soigné le perso aussi ???
-
+                document.getElementById("attaque").style.display = "none";
+                document.getElementById("userSoin").style.display = "none";
+    
+                document.getElementById("Abandon").style.display = "none";
+                document.getElementById("Retour").style.display = "block";
 
             } else if (AdvData["hp"] > 0) //sinon
             {

@@ -160,8 +160,6 @@
     //Ajoute 1 au score
     public function scorePlus($ID)
     {
-        $Score = $this->ID +1;
-
         $req = "UPDATE `perso` SET `Score`= $Score WHERE `ID`=$ID"; 
         $reponse = $this->_BDD->query($req);
     }
@@ -169,7 +167,7 @@
     //Ajoute 1 au score
     public function scoreMoins($ID)
     {
-        $Score = $this->ID -1;
+        $Score = $this->_Score - 1;
 
         $req = "UPDATE `perso` SET `Score`= $Score WHERE `ID`=$ID"; 
         $reponse = $this->_BDD->query($req);
@@ -177,6 +175,8 @@
 
     public function Heal($ID)
     {
+        $Score = $this->_Score + 1;
+
         $req = "UPDATE `perso` SET `Vie`= 100 WHERE `ID`=$ID"; 
         $reponse = $this->_BDD->query($req);
     }

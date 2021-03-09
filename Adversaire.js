@@ -86,8 +86,10 @@ function AttaqueAdv(IDAdversaire, IDPerso)
 
                 document.getElementById("PAdv2").innerText = `${PersoData["Nom"]} à été tué. Dommage !`;
 
-                //reset
-                //Lancer fonction pour remettre a 100 les PV
+                //Afficher bouton pour revenir en arrière
+                document.getElementById("attaque").style.display = "none";
+                document.getElementById("userSoin").style.display = "none";
+
 
 
             } else if (PersoData["hp"] > 0) //sinon
