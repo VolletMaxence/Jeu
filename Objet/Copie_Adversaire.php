@@ -21,7 +21,7 @@
         $this->_BDD = new PDO("mysql:host=192.168.64.116; dbname=Maxence_Jeu; charset=utf8", "root", "root");
 
         
-        $req = "SELECT * FROM adversaire_copie WHERE ID = $ID"; //
+        $req = "SELECT * FROM adversaire WHERE ID = $ID"; //
         $reponse = $this->_BDD->query($req);
 
         $Tab = $reponse->fetch(); //
@@ -36,7 +36,8 @@
     //Avec les infos, créé une copie de l'adversaire et retourne son ID
     public function CreationCopie()
     {
-        $req = "INSERT INTO `adversaire_copie`( `Nom`, `Vie`, `Attaque`, `Defense`, `Soin`) VALUES ('`$this->_Nom`,$this->_Vie,$this->_Attaque,$this->_Defense,$this->_Soin)";
+        //Mettre les infos de l'adversaire dans la table adversaire_copie
+        $req = "INSERT INTO `adversaire_copie`(`Nom`, `Vie`, `Attaque`, `Defense`, `Soin`) VALUES ('$this->_Nom',100,$this->_Attaque,$this->_Defense,$this->_Soin)";
         $reponse = $this->_BDD->query($req);
 
         $IDCopie = "SELECT `ID` FROM adversaire_copie ORDER BY ID DESC";

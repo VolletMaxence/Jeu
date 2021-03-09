@@ -41,18 +41,22 @@
                     <?php
                     $IDAdversaire = rand(1,1);
                     //Créer copie pour Adversaire : 
+                    echo "<p> lol : ".$IDAdversaire."</p>";
                     $Copie = New CopieAdv($IDAdversaire);
-
                     $IDAdversaire = $Copie->CreationCopie();
+                    echo "<p> lol : ".$IDAdversaire."</p>";
+                    //$Copie->CreationCopie() renvoie rien
 
                     //recuperer l'ID depuis le compte
                     $IDPerso = $_SESSION['Connect'];
 
+                    //Mise en place PV du Perso a 100 pour éviter triche
                     $Perso = New Perso($_SESSION['Connect']);
                     $Perso->Heal($_SESSION['Connect']);
 
-                    $fulldick = $IDAdversaire.",".$IDPerso
-                    //echo $fulldick;
+                    //Résolution de bug : guillemet s'inserait dans les fonction
+                    $fulldick = $IDAdversaire.",".$IDPerso;
+                    echo $fulldick;
                     ?>
                 
                     <form name="Action">
@@ -92,13 +96,13 @@
                             {
                                 $Perso->scoreMoins($_SESSION['Connect']);
 
-                                //echo "<script type='text/javascript'>document.location.replace('Acceuil.php');</script>";
+                                echo "<script type='text/javascript'>document.location.replace('Acceuil.php');</script>";
                             }
                             if(ISSET($_POST['Retour']))
                             {
                                 $Perso->scorePlus($_SESSION['Connect']);
 
-                                //echo "<script type='text/javascript'>document.location.replace('Acceuil.php');</script>";
+                                echo "<script type='text/javascript'>document.location.replace('Acceuil.php');</script>";
                             }
                         ?>
 
