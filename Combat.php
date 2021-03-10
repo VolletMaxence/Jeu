@@ -6,6 +6,9 @@
 
 <html> 
     <head>
+        <link rel="icon" href="/Image/icone.ico"/>
+        <meta charset="UTF-8">
+        <title>Combat</title>  
         <link rel="stylesheet" href="CSS/Creation.css" media="screen" type="text/css" />
         <script type="text/javascript" src="https://ajax.googleapis.com/ajax/libs/jquery/3.1.0/jquery.min.js"></script>
     </head>

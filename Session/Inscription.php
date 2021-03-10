@@ -4,7 +4,10 @@
 ?>
 <html>
     <head>
-    <link rel="stylesheet" href="../CSS/Session.css" media="screen" type="text/css" />
+        <link rel="icon" href="../Image/icone.ico"/>
+        <meta charset="UTF-8">
+        <title>Inscription</title>
+        <link rel="stylesheet" href="../CSS/Session.css" media="screen" type="text/css" />
     </head>
 
     <body>
@@ -34,7 +37,7 @@
             //$Base = new PDO("mysql:host=localhost; dbname=maxence_jeu; charset=utf8", "root", "");
             //$Base->setAttribute(PDO::ATTR_ERRMODE, PDO::ERRMODE_EXCEPTION);
             //Base Providence
-            $Base = new PDO("mysql:host=192.168.64.116; dbname=Maxence_Jeu; charset=utf8", "root", "root");
+            //$Base = new PDO("mysql:host=192.168.64.116; dbname=Maxence_Jeu; charset=utf8", "root", "root");
             //base Alays Data :
             $BDD = new PDO("mysql:host=mysql-xence.alwaysdata.net; dbname=xence_maxence_jeu; charset=utf8", "xence", "Tallys2001");
 
