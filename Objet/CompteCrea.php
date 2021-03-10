@@ -1,5 +1,5 @@
 <?php  
-    class Compte implements JsonSerializable {
+    class CompteCrea implements JsonSerializable {
 
         protected $_ID;
         protected $_Pseudo;
@@ -45,6 +45,9 @@
         {
             $req = "SELECT `ID` FROM `utilisateur` WHERE `Pseudo`= '$Pseudo' AND `Mot_de_Passe`= '$MDP' ORDER BY `ID` DESC";
             $reponse = $this->_BDD->query($req);
+            $Tab = $reponse->fetch(); //
+
+            return $Tab[0];
         }
 
         public function test() 

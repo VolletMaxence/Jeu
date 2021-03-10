@@ -30,7 +30,7 @@ function Reponse_Monstre(IDAdversaire, IDPerso)
             {
                 //Nombre random
                 //le maximum est exclus, il faut dont ajouter 1
-                var IA = Math.floor(Math.random() * 5) + 1;
+                var IA = Math.floor(Math.random() * 10) + 1;
                 
                 console.log("Valeur du nombre random qui décide de l'action : ", IA, "(Si ce n'est pas un int = erreur)");                    
                 
@@ -39,7 +39,7 @@ function Reponse_Monstre(IDAdversaire, IDPerso)
 
 
                 //Vérifier le nombre pour faire l'action = random
-                if(IA == 1)    // 20% de chance de se heal
+                if(IA == 1 || IA == 2)    // 20% de chance de se heal
                 {
                     //Action effectué selon le nombre obtenu
                     SoinAdv(IDAdversaire, IDPerso);
@@ -56,18 +56,18 @@ function Reponse_Monstre(IDAdversaire, IDPerso)
             {
                 //Nombre random
                 //le maximum est exclus, il faut dont ajouter 1
-                var IA = Math.floor(Math.random() * 5) + 1;
+                var IA = Math.floor(Math.random() * 3) + 1;
                 console.log("Valeur du nombre random qui décide de l'action : ", IA, "Si ce n'est pas un int = erreur)");                
 
                 //L'option défini selon les PV de l'adversaire
                 //alert("Vie suffisante pour faire un heal efficace")
 
                 //Vérifier le nombre pour faire l'action = random
-                if(IA == 1 || IA == 2)    // 40% de chance de Soin
+                if(IA == 1)    // 33.33% de chance de Soin
                 {
                     //Action effectué selon le nombre obtenu
                     SoinAdv(IDAdversaire, IDPerso);
-                } else                      // 60% de chance d'Attquer
+                } else                      // 66.66% de chance d'Attquer
                 {
                     AttaqueAdv(IDAdversaire, IDPerso);
                 }
@@ -78,18 +78,18 @@ function Reponse_Monstre(IDAdversaire, IDPerso)
             {
                 //Nombre random
                 //le maximum est exclus, il faut dont ajouter 1
-                var IA = Math.floor(Math.random() * 3) + 1;
+                var IA = Math.floor(Math.random() * 4) + 1;
                 console.log("Valeur du nombre random qui décide de l'action : ", IA, "(Si ce n'est pas un int = erreur)");                
 
                 //L'option défini selon les PV de l'adversaire
                 //alert("Vie suffisante pour faire un heal efficace + Adversaire dans une bonne situation")
 
                 //Vérifier le nombre pour faire l'action = random
-                if(IA == 1 || IA == 2)        // 66.6% de chance de Soin
+                if(IA == 1 || IA == 2)        // 50% de chance de Soin
                 {
                     //Action effectué selon le nombre obtenu
                     SoinAdv(IDAdversaire, IDPerso);
-                } else                         // 33.3% de chance d'attaquer
+                } else                         // 50% de chance d'attaquer
                 {
                     AttaqueAdv(IDAdversaire, IDPerso);
                 }
@@ -100,18 +100,18 @@ function Reponse_Monstre(IDAdversaire, IDPerso)
             {
                 //Nombre random
                 //le maximum est exclus, il faut dont ajouter 1
-                var IA = Math.floor(Math.random() * 4) + 1;
+                var IA = Math.floor(Math.random() * 7) + 1;
                 console.log("Valeur du nombre random qui décide de l'action : ", IA, "(Si ce n'est pas un int = erreur)");                
 
                 //L'option défini selon les PV de l'adversaire
                 //alert("Adversaire en mauvaise posture")
 
                 //Vérifier le nombre pour faire l'action = random
-                if(IA == 1)    //25% de chance d'attaquer
+                if(IA == 1)    //% de chance d'attaquer
                 {
                     //Action effectué selon le nombre obtenu
                     AttaqueAdv(IDAdversaire, IDPerso);
-                } else          //75% de chance de se heal
+                } else          //% de chance de se heal
                 {
                     SoinAdv(IDAdversaire, IDPerso);
                 }

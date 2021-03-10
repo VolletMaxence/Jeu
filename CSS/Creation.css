@@ -1,0 +1,30 @@
+h1{
+    margin-left: 45%;
+}
+input[type=text], input[type=password] {
+    width: 100%;
+    padding: 12px 20px;
+    margin: 8px 0;
+    display: inline-block;
+    border: 1px solid #ccc;
+    box-sizing: border-box;
+    width: 17%;
+}
+
+input[type=submit] {
+    background-color: #d6894a;
+    color: white;
+    padding: 10px 2px;
+    margin: 8px 0;
+    border: none;
+    cursor: pointer;
+    width: 10%;
+}
+input[type=submit]:hover {
+    background-color: white;
+    color: #d39665;
+    border: 1px solid #d39665;
+}
+#texte{
+    font-size: 20px;
+}

@@ -121,7 +121,7 @@ function SoinAdv(IDAdversaire)
             //Obtient les valeur obtenu avec la methode :
             let userSoin = JSON.parse(code_html)
             
-            document.getElementById("_AVie").innerText = "Vie : " + userSoin["hp"]
+            document.getElementById("_AVie").innerText = "PV : " + userSoin["hp"]
 
             //Récupere la variable Soin pour vérifier si le soin a eu lieu
             if(userSoin["Verif"] == 1)

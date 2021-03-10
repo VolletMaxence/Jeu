@@ -5,7 +5,7 @@
 <html> 
     <head>
         <script type="text/javascript" src="https://ajax.googleapis.com/ajax/libs/jquery/3.1.0/jquery.min.js"></script>
-        <link rel="stylesheet" href="Index.css" media="screen" type="text/css" />
+        <link rel="stylesheet" href="CSS/Accueil.css" media="screen" type="text/css" />
     </head>
     <body>
         <?php

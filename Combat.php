@@ -6,6 +6,7 @@
 
 <html> 
     <head>
+        <link rel="stylesheet" href="CSS/Creation.css" media="screen" type="text/css" />
         <script type="text/javascript" src="https://ajax.googleapis.com/ajax/libs/jquery/3.1.0/jquery.min.js"></script>
     </head>
     <body>
@@ -41,11 +42,8 @@
                     <?php
                     $IDAdversaire = rand(1,1);
                     //Créer copie pour Adversaire : 
-                    echo "<p> lol : ".$IDAdversaire."</p>";
                     $Copie = New CopieAdv($IDAdversaire);
                     $IDAdversaire = $Copie->CreationCopie();
-                    echo "<p> lol : ".$IDAdversaire."</p>";
-                    //$Copie->CreationCopie() renvoie rien
 
                     //recuperer l'ID depuis le compte
                     $IDPerso = $_SESSION['Connect'];
@@ -56,7 +54,7 @@
 
                     //Résolution de bug : guillemet s'inserait dans les fonction
                     $fulldick = $IDAdversaire.",".$IDPerso;
-                    echo $fulldick;
+                    //echo $fulldick;
                     ?>
                 
                     <form name="Action">
@@ -94,13 +92,21 @@
                         <?php
                             if(ISSET($_POST['Abandon']))
                             {
+                                //retirer 1 au score
                                 $Perso->scoreMoins($_SESSION['Connect']);
+
+                                //Supprimer la copi pour pas surcharger la base
+                                $Copie->SupprCopie();
 
                                 echo "<script type='text/javascript'>document.location.replace('Acceuil.php');</script>";
                             }
                             if(ISSET($_POST['Retour']))
                             {
+                                //Ajouter 1 au score
                                 $Perso->scorePlus($_SESSION['Connect']);
+
+                                //Supprimer la copi pour pas surcharger la base
+                                $Copie->SupprCopie();
 
                                 echo "<script type='text/javascript'>document.location.replace('Acceuil.php');</script>";
                             }

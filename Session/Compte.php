@@ -4,7 +4,7 @@
 ?>
 <html>
     <head>
-    <link rel="stylesheet" href="../CSS/Session.css" media="screen" type="text/css" />
+        <link rel="stylesheet" href="../CSS/Session.css" type="text/css" />
     </head>
 
     <body>

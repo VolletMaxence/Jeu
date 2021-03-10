@@ -9,10 +9,8 @@
         if($_SESSION && $_SESSION['Connect'] != 0){
             //Si session existe affichage de la page
         }else{
-            
-
             ?>
-            <link rel="stylesheet" href="Session/Session.css" media="screen" type="text/css" />
+            <link rel="stylesheet" href="CSS/Session.css" media="screen" type="text/css" />
             <div id="container">
                 <!-- zone de connexion avec formulaire -->
                 
@@ -28,7 +26,7 @@
                     <input type="submit" name='submit' value='LOGIN' >
                 </form>
                 <!-- Bouton pour s'inscrir -->
-                <a href="Session/Inscription.php"> Créer un nouveau Compte + nouveau Perso </a>
+                <a href="Session/Creation.php"> Créer un nouveau Compte + nouveau Perso </a>
             </div>
 
             <?php 

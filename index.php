@@ -1,6 +1,6 @@
 <html>
     <head>
-
+        <link rel="stylesheet" href="CSS/Index.css" media="screen" type="text/css" />
     </head>
     <body>
         <div id="Acceuil">
