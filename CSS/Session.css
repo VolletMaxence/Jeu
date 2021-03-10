@@ -32,7 +32,7 @@ input[type=text], input[type=password] {
 
 /* Set a style for all buttons */
 input[type=submit], button[type=button] {
-    background-color: #d65a4a;
+    background-color: #d6894a;
     color: white;
     padding: 10px 2px;
     margin: 2px 0;
@@ -46,7 +46,6 @@ input[type=submit]:hover {
     border: 1px solid #d39665;
 }
 #texte{
-    font-size: 20px;
-    margin-left:35%;
+    font-size: 2vh;
     margin-top: 5%;
 }

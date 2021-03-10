@@ -13,7 +13,6 @@
         <?php
             if($_SESSION && $_SESSION['Connect'] != 0){ 
             ?>
-
                 <form>
                     <!-- Affichage des stats Adversaire -->
                     <h1 id="Adv"></h1>
@@ -24,7 +23,7 @@
                     <h2 id="name"></h2>
                     <ul id="stats">
                     </ul>
-
+            <div id="text">
                     <!-- Textes affichant les infos de ce qu'il se passe lors du combat -->
                     <!-- Info de ce que fait Perso-->
                     <p id="PPerso1">    </p>
@@ -35,12 +34,25 @@
                     <p id=PAdv1>    </p>
 
                     <p id=PAdv2>    </p>
-
+            </div>
 
 
                     <!-- Variables des adversaire / perso -->
                     <?php
-                    $IDAdversaire = rand(1,1);
+                    //Base Maison : 
+                    //$BDD = new PDO("mysql:host=localhost; dbname=maxence_jeu; charset=utf8","root","");
+                    //base Providence :
+                    $BDD = new PDO("mysql:host=192.168.64.116; dbname=Maxence_Jeu; charset=utf8", "root", "root");
+
+                    //Compter le nombre de Mob en base pour le nombre aléatoire
+                    $req = 'SELECT COUNT(*) FROM `adversaire` WHERE 1';
+                    $reponse = $BDD->query($req);
+                    $NBRMonstre = $reponse->fetch(); //
+
+
+
+                    $IDAdversaire = rand(1,$NBRMonstre['COUNT(*)']);
+
                     //Créer copie pour Adversaire : 
                     $Copie = New CopieAdv($IDAdversaire);
                     $IDAdversaire = $Copie->CreationCopie();

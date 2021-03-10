@@ -1,6 +1,3 @@
-h1{
-    margin-left: 45%;
-}
 input[type=text], input[type=password] {
     width: 100%;
     padding: 12px 20px;
@@ -10,9 +7,26 @@ input[type=text], input[type=password] {
     box-sizing: border-box;
     width: 17%;
 }
-
 input[type=submit] {
-    background-color: #d6894a;
+    background-color: #3b3635;
+    color: white;
+    padding: 10px 2px;
+    margin: 8px 0;
+    border: none;
+    cursor: pointer;
+    width: 10%;
+    margin-left: 5%;
+}
+input[type=submit]:hover {
+    background-color: white;
+    color: #3b3635;
+    border: 1px solid #3b3635;
+}
+#text{
+    padding-left: 2vh;
+}
+#attaque{
+    background-color: #d65a4a;
     color: white;
     padding: 10px 2px;
     margin: 8px 0;
@@ -20,11 +34,25 @@ input[type=submit] {
     cursor: pointer;
     width: 10%;
 }
-input[type=submit]:hover {
+#attaque:hover{
     background-color: white;
-    color: #d39665;
-    border: 1px solid #d39665;
+    color: #d65a4a;
+    border: 1px solid #d65a4a;
 }
-#texte{
-    font-size: 20px;
+#userSoin{
+    background-color: #6eca5c;
+    color: white;
+    padding: 10px 2px;
+    margin: 8px 0;
+    border: none;
+    cursor: pointer;
+    width: 10%;
+}
+#userSoin:hover{
+    background-color: white;
+color: #6eca5c;
+border: 1px solid #6eca5c;
+}
+body{
+    padding-left: 2vh;
 }

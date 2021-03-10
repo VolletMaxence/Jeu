@@ -30,9 +30,7 @@
                     <input type=number name="PSoin" min="1" max="38" required>
 
                     <input type=submit name="PSubmit" value='Ajoute ton personnage'>
-                </form>
-            </div>
-                <div id="texte">
+                    <div id="texte">
                     <p name="Info" id="Info">
                         Le total des valeur d'Attaque, de Défense et de Soin ne doit pas dépasser <strong>40</strong>.
                     </p>
@@ -40,6 +38,8 @@
                         De ce fait, vous devez avoir une valeur minimal de <strong>1</strong> dans chaque stats et une valeur maximal de <strong>38</strong>.
                     </p>
                 </div>
+                </form>
+            </div>
 
                     <?php
                     if (isset($_POST["PSubmit"])) {
@@ -47,7 +47,7 @@
                         {
                             ?>
                             <script>
-                                document.getElementById("Info").innerText = `Le total de vos valeur d'Attaque, de Défense et de Soin a dépasé 40, merci d'entrer des valeurs valides.`;
+                                document.getElementById("Info").innerText = `Le total de vos valeur d'Attaque, de Défense et de Soin a dépassé 40, merci d'entrer des valeurs valides.`;
                                 console.log("Les stats rentré ne sont pas valide : dépassent 40")
                             </script>
                             <?php
@@ -91,7 +91,7 @@
                             //Destroy la Session
                             session_destroy();
 
-                            //echo "<script type='text/javascript'>document.location.replace('../Acceuil.php');</script>";
+                            echo "<script type='text/javascript'>document.location.replace('../Acceuil.php');</script>";
                         }
                     }
             }

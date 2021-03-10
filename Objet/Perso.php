@@ -160,11 +160,13 @@
     //Ajoute 1 au score
     public function scorePlus($ID)
     {
+        $Score = $this->_Score + 1;
+
         $req = "UPDATE `perso` SET `Score`= $Score WHERE `ID`=$ID"; 
         $reponse = $this->_BDD->query($req);
     }
 
-    //Ajoute 1 au score
+    //Ajoute -1 au score
     public function scoreMoins($ID)
     {
         $Score = $this->_Score - 1;
@@ -173,6 +175,7 @@
         $reponse = $this->_BDD->query($req);
     }
 
+    //Heal Entièrement le Perso
     public function Heal($ID)
     {
         $Score = $this->_Score + 1;
@@ -180,7 +183,6 @@
         $req = "UPDATE `perso` SET `Vie`= 100 WHERE `ID`=$ID"; 
         $reponse = $this->_BDD->query($req);
     }
-
 
 
     public function jsonSerialize()

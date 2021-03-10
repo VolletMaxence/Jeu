@@ -1,13 +1,14 @@
 -- phpMyAdmin SQL Dump
--- version 5.0.2
+-- version 4.9.7
 -- https://www.phpmyadmin.net/
 --
--- Hôte : 127.0.0.1:3306
--- Généré le : mar. 02 mars 2021 à 23:00
--- Version du serveur :  8.0.21
--- Version de PHP : 7.3.21
+-- Hôte : localhost
+-- Généré le : Dim 21 fév. 2021 à 00:25
+-- Version du serveur :  10.1.47-MariaDB-0+deb9u1
+-- Version de PHP : 7.0.33-0+deb9u10
 
 SET SQL_MODE = "NO_AUTO_VALUE_ON_ZERO";
+SET AUTOCOMMIT = 0;
 START TRANSACTION;
 SET time_zone = "+00:00";
 
@@ -18,7 +19,7 @@ SET time_zone = "+00:00";
 /*!40101 SET NAMES utf8mb4 */;
 
 --
--- Base de données : `maxence_jeu`
+-- Base de données : `Maxence_Jeu`
 --
 
 -- --------------------------------------------------------
@@ -27,23 +28,50 @@ SET time_zone = "+00:00";
 -- Structure de la table `adversaire`
 --
 
-DROP TABLE IF EXISTS `adversaire`;
-CREATE TABLE IF NOT EXISTS `adversaire` (
-  `ID` int NOT NULL AUTO_INCREMENT,
+CREATE TABLE `adversaire` (
+  `ID` int(11) NOT NULL,
   `Nom` varchar(100) NOT NULL,
-  `Vie` int NOT NULL,
-  `Attaque` int NOT NULL,
-  `Defense` int NOT NULL,
-  `Soin` int NOT NULL,
-  PRIMARY KEY (`ID`)
-) ENGINE=InnoDB AUTO_INCREMENT=2 DEFAULT CHARSET=utf8 COLLATE=utf8_general_ci;
+  `Vie` int(11) NOT NULL,
+  `Attaque` int(11) NOT NULL,
+  `Defense` int(11) NOT NULL,
+  `Soin` int(11) NOT NULL
+) ENGINE=InnoDB DEFAULT CHARSET=utf8;
 
 --
 -- Déchargement des données de la table `adversaire`
 --
 
 INSERT INTO `adversaire` (`ID`, `Nom`, `Vie`, `Attaque`, `Defense`, `Soin`) VALUES
-(1, 'Krhaal', 0, 15, 10, 10);
+(1, 'Krhaal', 100, 25, 10, 5),
+(2, 'Storm Terror', 100, 35, 4, 1),
+(3, 'Cafetière', 100, 15, 16, 9),
+(4, 'BoB', 100, 13, 14, 13),
+(5, 'Klee', 100, 25, 10, 5);
+
+-- --------------------------------------------------------
+
+--
+-- Structure de la table `adversaire_copie`
+--
+
+CREATE TABLE `adversaire_copie` (
+  `ID` int(11) NOT NULL,
+  `Nom` varchar(100) NOT NULL,
+  `Vie` int(11) NOT NULL,
+  `Attaque` int(11) NOT NULL,
+  `Defense` int(11) NOT NULL,
+  `Soin` int(11) NOT NULL
+) ENGINE=InnoDB DEFAULT CHARSET=utf8mb4;
+
+--
+-- Déchargement des données de la table `adversaire_copie`
+--
+
+INSERT INTO `adversaire_copie` (`ID`, `Nom`, `Vie`, `Attaque`, `Defense`, `Soin`) VALUES
+(326, 'Krhaal', 10, 20, 10, 10),
+(334, 'BoB', 10, 13, 14, 13),
+(356, 'Storm Terror', 10, 35, 4, 1),
+(359, 'Krhaal', 10, 25, 10, 5);
 
 -- --------------------------------------------------------
 
@@ -51,27 +79,28 @@ INSERT INTO `adversaire` (`ID`, `Nom`, `Vie`, `Attaque`, `Defense`, `Soin`) VALU
 -- Structure de la table `perso`
 --
 
-DROP TABLE IF EXISTS `perso`;
-CREATE TABLE IF NOT EXISTS `perso` (
-  `ID` int NOT NULL AUTO_INCREMENT,
+CREATE TABLE `perso` (
+  `ID` int(11) NOT NULL,
   `Nom` varchar(100) NOT NULL,
-  `Vie` int NOT NULL,
-  `Attaque` int NOT NULL,
-  `Defense` int NOT NULL,
-  `Soin` int NOT NULL,
-  `Score` int NOT NULL,
-  `IDCompte` int NOT NULL,
-  PRIMARY KEY (`ID`)
-) ENGINE=InnoDB AUTO_INCREMENT=5 DEFAULT CHARSET=utf8 COLLATE=utf8_general_ci;
+  `Vie` int(11) NOT NULL,
+  `Attaque` int(11) NOT NULL,
+  `Defense` int(11) NOT NULL,
+  `Soin` int(11) NOT NULL,
+  `Score` int(11) NOT NULL,
+  `IDCompte` int(11) NOT NULL
+) ENGINE=InnoDB DEFAULT CHARSET=utf8;
 
 --
 -- Déchargement des données de la table `perso`
 --
 
 INSERT INTO `perso` (`ID`, `Nom`, `Vie`, `Attaque`, `Defense`, `Soin`, `Score`, `IDCompte`) VALUES
-(1, 'Gros Chien', 70, 50, 10, 30, 0, 1),
+(1, 'Gros Chien', 100, 50, 10, 30, 0, 1),
 (2, 'JP', 100, 10, 20, 9, 0, 2),
-(4, 'test', 100, 1, 2, 3, 0, 3);
+(6, 'PuceauGangGang', 100, 20, 10, 10, 0, 9),
+(26, 'OwO', 100, 16, 20, 4, 0, 75),
+(27, 'booba', 100, 38, 1, 1, 0, 76),
+(28, 'Root', 100, 30, 5, 5, 0, 77);
 
 -- --------------------------------------------------------
 
@@ -79,24 +108,80 @@ INSERT INTO `perso` (`ID`, `Nom`, `Vie`, `Attaque`, `Defense`, `Soin`, `Score`, 
 -- Structure de la table `utilisateur`
 --
 
-DROP TABLE IF EXISTS `utilisateur`;
-CREATE TABLE IF NOT EXISTS `utilisateur` (
+CREATE TABLE `utilisateur` (
   `Pseudo` varchar(100) NOT NULL,
   `Mot_de_Passe` varchar(100) NOT NULL,
-  `ID` int NOT NULL AUTO_INCREMENT,
-  `IDPerso` int NOT NULL,
-  `Score` int NOT NULL,
-  PRIMARY KEY (`ID`)
-) ENGINE=MyISAM AUTO_INCREMENT=4 DEFAULT CHARSET=utf8 COLLATE=utf8_general_ci;
+  `ID` int(11) NOT NULL,
+  `IDPerso` int(11) NOT NULL
+) ENGINE=MyISAM DEFAULT CHARSET=utf8;
 
 --
 -- Déchargement des données de la table `utilisateur`
 --
 
-INSERT INTO `utilisateur` (`Pseudo`, `Mot_de_Passe`, `ID`, `IDPerso`, `Score`) VALUES
-('XenceV', 'root', 1, 1, 0),
-('PM', 'PV', 2, 2, 0),
-('test', 'test', 3, 4, 0);
+INSERT INTO `utilisateur` (`Pseudo`, `Mot_de_Passe`, `ID`, `IDPerso`) VALUES
+('XenceV', 'root', 1, 1),
+('PM', 'PV', 2, 2),
+('UwU', '456', 75, 26),
+('523', '65', 76, 27),
+('root', 'root', 77, 28),
+('41', '41', 78, 0);
+
+--
+-- Index pour les tables déchargées
+--
+
+--
+-- Index pour la table `adversaire`
+--
+ALTER TABLE `adversaire`
+  ADD PRIMARY KEY (`ID`);
+
+--
+-- Index pour la table `adversaire_copie`
+--
+ALTER TABLE `adversaire_copie`
+  ADD PRIMARY KEY (`ID`);
+
+--
+-- Index pour la table `perso`
+--
+ALTER TABLE `perso`
+  ADD PRIMARY KEY (`ID`);
+
+--
+-- Index pour la table `utilisateur`
+--
+ALTER TABLE `utilisateur`
+  ADD PRIMARY KEY (`ID`);
+
+--
+-- AUTO_INCREMENT pour les tables déchargées
+--
+
+--
+-- AUTO_INCREMENT pour la table `adversaire`
+--
+ALTER TABLE `adversaire`
+  MODIFY `ID` int(11) NOT NULL AUTO_INCREMENT, AUTO_INCREMENT=6;
+
+--
+-- AUTO_INCREMENT pour la table `adversaire_copie`
+--
+ALTER TABLE `adversaire_copie`
+  MODIFY `ID` int(11) NOT NULL AUTO_INCREMENT, AUTO_INCREMENT=386;
+
+--
+-- AUTO_INCREMENT pour la table `perso`
+--
+ALTER TABLE `perso`
+  MODIFY `ID` int(11) NOT NULL AUTO_INCREMENT, AUTO_INCREMENT=29;
+
+--
+-- AUTO_INCREMENT pour la table `utilisateur`
+--
+ALTER TABLE `utilisateur`
+  MODIFY `ID` int(11) NOT NULL AUTO_INCREMENT, AUTO_INCREMENT=79;
 COMMIT;
 
 /*!40101 SET CHARACTER_SET_CLIENT=@OLD_CHARACTER_SET_CLIENT */;

@@ -13,3 +13,21 @@ input[type=submit]:hover {
     color: #d39665;
     border: 1px solid #d39665;
 }
+table {
+    margin-left: 35%;
+    margin-top: 5%;
+    border: medium solid #000000;
+    width: 30%;
+    border-collapse: collapse
+    }
+    td, th {
+    border: thin solid #000000;
+    width: 10%;
+    }
+#text{
+        margin-left: 41%;
+        margin-top: 5%;
+}
+.align{
+    text-align: center;
+}
