@@ -17,6 +17,8 @@
             //$BDD = new PDO("mysql:host=localhost; dbname=maxence_jeu; charset=utf8","root","");
             //base Providence :
             $BDD = new PDO("mysql:host=192.168.64.116; dbname=Maxence_Jeu; charset=utf8", "root", "root");
+            //base Alays Data :
+            $BDD = new PDO("mysql:host=mysql-xence.alwaysdata.net; dbname=xence_maxence_jeu; charset=utf8", "xence", "Tallys2001");
 
 
 
