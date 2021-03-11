@@ -43,7 +43,7 @@
 
                     <?php
                     if (isset($_POST["PSubmit"])) {
-                        if ($_POST['PAttaque'] + $_POST['PDefense'] + $_POST['PSoin'] > 40 || $_POST['PAttaque'] + $_POST['PDefense'] + $_POST['PSoin'] < 0)
+                        if (abs($_POST['PAttaque']) + abs($_POST['PDefense']) + abs($_POST['PSoin']) > 40 || abs($_POST['PAttaque']) + abs($_POST['PDefense']) + abs($_POST['PSoin']) < 0 || abs($_POST['PAttaque']) < 1 || abs($_POST['PDefense']) < 1 || abs($_POST['PSoin']) < 1)
                         {
                             ?>
                             <script>
