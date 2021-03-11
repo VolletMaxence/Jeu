@@ -82,7 +82,7 @@ function Attaque (IDAdversaire, IDPerso)
             //Si les dégats sont supérieur aux HP restant : 
             if(AdvData["Mort"] == 1)
             {
-                document.getElementById("PPerso1").innerText = `${AdvData["Nom"]} est deja mort, pas la peine de s'acharner`;
+                document.getElementById("PPerso1").innerText = `${AdvData["Nom"]} est déjà mort, pas la peine de s'acharner`;
                 document.getElementById("PPerso2").innerText = ` `;
             }
 
@@ -154,7 +154,7 @@ function Soin(IDAdversaire, IDPerso)
                 document.getElementById("PPerso1").innerText = `${userSoin["Nom"]} a déjà l'intégralité de ses PV, Soin impossible !`;
             } else
             {
-                document.getElementById("PPerso1").innerText = `${userSoin["Nom"]} s'est soigné de ${userSoin["Soin"]} PV.`;
+                document.getElementById("PPerso1").innerText = `${userSoin["Nom"]} c'est soigné de ${userSoin["Soin"]} PV.`;
                 document.getElementById("PPerso2").innerText = `${userSoin["Nom"]} a désormais ${userSoin["hp"]} PV.`;
             }
 

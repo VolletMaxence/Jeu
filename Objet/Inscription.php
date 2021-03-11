@@ -48,7 +48,7 @@
 
         public function GetIDUtilisateur($Pseudo, $Attaque, $Defense, $Soin)
         {
-            echo "P : ".$Pseudo.", A : ".$Attaque.", D : ".$Defense.", S : ".$Soin;
+            //echo "P : ".$Pseudo.", A : ".$Attaque.", D : ".$Defense.", S : ".$Soin;
 
             $req = "SELECT `ID`,`Nom`,`Attaque`,`Defense`,`Soin` FROM `perso` WHERE `Nom`= '$Pseudo' AND `Attaque`= $Attaque AND `Defense`= $Defense AND `Soin`= $Soin";
             //SELECT `ID`,`Nom`,`Attaque`,`Defense`,`Soin` FROM `perso` WHERE `Nom`= 'Gros Chien' AND `Attaque`= 50 AND `Defense`= 10 AND `Soin`= 30

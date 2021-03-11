@@ -73,7 +73,7 @@ function AttaqueAdv(IDAdversaire, IDPerso)
             //Si la cible à 0 PV : 
             if(PersoData["Mort"] == 1)
             {
-                document.getElementById("PAdv1").innerText = `${PersoData["Nom"]} est deja mort, pas la peine de s'acharner`;
+                document.getElementById("PAdv1").innerText = `${PersoData["Nom"]} est déjà mort, pas la peine de s'acharner`;
 
                 document.getElementById("PAdv2").innerText = ``;
             }
@@ -132,7 +132,7 @@ function SoinAdv(IDAdversaire)
             } else
             {
                 document.getElementById("PAdv1").innerText = `${userSoin["Nom"]} c'est soigné de ${userSoin["Soin"]} PV.`;
-                document.getElementById("PAdv2").innerText = `${userSoin["Nom"]} a désormains ${userSoin["hp"]} PV.`;
+                document.getElementById("PAdv2").innerText = `${userSoin["Nom"]} a désormais ${userSoin["hp"]} PV.`;
             }
 
 

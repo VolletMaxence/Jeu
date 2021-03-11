@@ -32,10 +32,10 @@
                     <input type=submit name="PSubmit" value='Ajoute ton personnage'>
                     <div id="texte">
                     <p name="Info" id="Info">
-                        Le total des valeur d'Attaque, de Défense et de Soin ne doit pas dépasser <strong>40</strong>.
+                        Le total des valeurs d'<strong>Attaque</strong>, de <strong>Défense</strong> et de <strong>Soin</strong> ne doit pas dépasser <strong>40</strong>.
                     </p>
                     <p name="Info2" id="Info2">
-                        De ce fait, vous devez avoir une valeur minimal de <strong>1</strong> dans chaque stats et une valeur maximal de <strong>38</strong>.
+                        De ce fait, vous devez avoir une valeur minimal de <strong>1</strong> dans chaque stats et une valeur maximale de <strong>38</strong>.
                     </p>
                 </div>
                 </form>
@@ -43,11 +43,11 @@
 
                     <?php
                     if (isset($_POST["PSubmit"])) {
-                        if ($_POST['PAttaque'] + $_POST['PDefense'] + $_POST['PSoin'] > 40)
+                        if ($_POST['PAttaque'] + $_POST['PDefense'] + $_POST['PSoin'] > 40 || $_POST['PAttaque'] + $_POST['PDefense'] + $_POST['PSoin'] < 0)
                         {
                             ?>
                             <script>
-                                document.getElementById("Info").innerText = `Le total de vos valeur d'Attaque, de Défense et de Soin a dépassé 40, merci d'entrer des valeurs valides.`;
+                                document.getElementById("Info").innerText = `Le total de vos valeurs d'<strong>Attaque</strong>, de <strong>Défense</strong> et de <strong>Soin</strong> a dépassé <strong>40</strong>, merci d'entrer des <strong>valeurs valides</strong>.`;
                                 console.log("Les stats rentré ne sont pas valide : dépassent 40")
                             </script>
                             <?php
@@ -68,7 +68,7 @@
                             $req = `INSERT INTO perso (Nom, Vie, Attaque, Defense, Soin) VALUES ('$PPseudo',100,$PAttaque,$PDefense,$PSoin)`; //
                             $reponse = $BDD->query($req);
 
-                            echo "<strong>".$PPseudo."</strong> à été ajouter, il a <strong>".$PAttaque."</strong> points d'attaque, <strong>".$PDefense."</strong> point de défense et <strong>".$PSoin."</strong> de puissance de soin. ";
+                            echo "<strong>".$PPseudo."</strong> à été ajouter, il a <strong>".$PAttaque."</strong> points d'Attaques, <strong>".$PDefense."</strong> points de Défense et <strong>".$PSoin."</strong> de puissance de Soin. ";
 
 
                             //Obtenir l'ID du compte :
@@ -88,7 +88,7 @@
 
                             $Perso->Liaison($PersoID, $CompteID);
 
-                            echo "L'utilisateur d'ID <strong>".$CompteID."</strong> et le perso d'ID <strong>".$PersoID."</strong> ont été correctement lié.";
+                            echo "L'utilisateur d'ID <strong>".$CompteID."</strong> et le perso d'ID <strong>".$PersoID."</strong> ont été correctement liés.";
 
                             //Destroy la Session
                             session_destroy();

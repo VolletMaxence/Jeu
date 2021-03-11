@@ -108,6 +108,7 @@
                     </form>
                          
                         <?php
+                            //Si le joueur veux abandonner le combat :
                             if(ISSET($_POST['Abandon']))
                             {
                                 //retirer 1 au score
@@ -116,8 +117,10 @@
                                 //Supprimer la copi pour pas surcharger la base
                                 $Copie->SupprCopie();
 
+                                //Renvoie sur la page d'acceuil
                                 echo "<script type='text/javascript'>document.location.replace('Acceuil.php');</script>";
                             }
+                            //Si le joueur a gagner le combat :
                             if(ISSET($_POST['Retour']))
                             {
                                 //Ajouter 1 au score
@@ -126,6 +129,7 @@
                                 //Supprimer la copi pour pas surcharger la base
                                 $Copie->SupprCopie();
 
+                                //Renvoie sur la page d'acceuil
                                 echo "<script type='text/javascript'>document.location.replace('Acceuil.php');</script>";
                             }
                         ?>
