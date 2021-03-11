@@ -47,7 +47,7 @@
                         {
                             ?>
                             <script>
-                                document.getElementById("Info").innerText = `Le total de vos valeurs d'<strong>Attaque</strong>, de <strong>Défense</strong> et de <strong>Soin</strong> a dépassé <strong>40</strong>, merci d'entrer des <strong>valeurs valides</strong>.`;
+                                document.getElementById("Info").innerText = `Le total de vos valeurs d'Attaque, de Défense et de Soin a dépassé 40, merci d'entrer des valeurs valides.`;
                                 console.log("Les stats rentré ne sont pas valide : dépassent 40")
                             </script>
                             <?php
