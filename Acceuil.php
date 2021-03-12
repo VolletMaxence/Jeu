@@ -56,7 +56,7 @@
                 $BDD = new PDO("mysql:host=mysql-xence.alwaysdata.net; dbname=xence_maxence_jeu; charset=utf8", "xence", "Tallys2001");
 
                 //Affichage des 6 meilleurs
-                $CommResult = $BDD->query("SELECT `Nom`, `Score` FROM `perso` ORDER BY `Score` DESC LIMIT 6");
+                $CommResult = $BDD->query("SELECT `Nom`, `Score` FROM `perso` ORDER BY `Score` DESC LIMIT 7");
                 // selectionne le id du jeux le nom et sa fait une jointure avec articlelike et game
                 ?>
                    <div id="text">

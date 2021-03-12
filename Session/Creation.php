@@ -21,13 +21,13 @@
                     <!-- Partager l'Attaque / Défense / Soin selon ce que veux le joueur avec base de X points -->
 
                     <label> Attaque </label>
-                    <input type=number name="PAttaque" min="1" max="38" required>
+                    <input type=number name="PAttaque" min="5" max="30" required>
                     
                     <label> Défense </label>
-                    <input type=number name="PDefense" min="1" max="38" required>
+                    <input type=number name="PDefense" min="5" max="30" required>
 
                     <label> Soin </label>
-                    <input type=number name="PSoin" min="1" max="38" required>
+                    <input type=number name="PSoin" min="5" max="30" required>
 
                     <input type=submit name="PSubmit" value='Ajoute ton personnage'>
                     <div id="texte">
@@ -35,7 +35,7 @@
                         Le total des valeurs d'<strong>Attaque</strong>, de <strong>Défense</strong> et de <strong>Soin</strong> ne doit pas dépasser <strong>40</strong>.
                     </p>
                     <p name="Info2" id="Info2">
-                        De ce fait, vous devez avoir une valeur minimal de <strong>1</strong> dans chaque stats et une valeur maximale de <strong>38</strong>.
+                        De ce fait, vous devez avoir une valeur minimal de <strong>5</strong> dans chaque stats et une valeur maximale de <strong>30</strong>.
                     </p>
                 </div>
                 </form>
@@ -43,7 +43,7 @@
 
                     <?php
                     if (isset($_POST["PSubmit"])) {
-                        if (abs($_POST['PAttaque']) + abs($_POST['PDefense']) + abs($_POST['PSoin']) > 40 || abs($_POST['PAttaque']) + abs($_POST['PDefense']) + abs($_POST['PSoin']) < 0 || abs($_POST['PAttaque']) < 1 || abs($_POST['PDefense']) < 1 || abs($_POST['PSoin']) < 1)
+                        if (abs($_POST['PAttaque']) + abs($_POST['PDefense']) + abs($_POST['PSoin']) > 40 || abs($_POST['PAttaque']) + abs($_POST['PDefense']) + abs($_POST['PSoin']) < 5 || abs($_POST['PAttaque']) < 5 || abs($_POST['PDefense']) < 5 || abs($_POST['PSoin']) < 1)
                         {
                             ?>
                             <script>
@@ -90,7 +90,12 @@
 
                             echo "L'utilisateur d'ID <strong>".$CompteID."</strong> et le perso d'ID <strong>".$PersoID."</strong> ont été correctement liés.";
 
-                            //Destroy la Session
+                            //Changer numéro de session pour être directement connecté : 
+                            //Recupérer l'ID Compte : 
+                            //$CompteID = $Perso->GetIDCompte($_POST['PPseudo'], $_POST['PAttaque'], $_POST['PDefense'], $_POST['PSoin']);
+
+                            //$_SESSION['Connect'] = $CompteID;
+
                             session_destroy();
 
                             echo "<script type='text/javascript'>document.location.replace('../Acceuil.php');</script>";

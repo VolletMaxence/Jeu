@@ -6,6 +6,7 @@
         protected $_Attaque;
         protected $_Defense;
         protected $_Soin;
+        protected $_IDCompte;
         protected $_BDD;
  
 
@@ -55,9 +56,25 @@
             $reponse = $this->_BDD->query($req);
             
             $Tab = $reponse->fetch(); //
-            $this->_ID = $Tab['ID'];
+            $this->_ID = $Tab['IDCompte'];
 
-            echo "this ID : ".$Tab['ID'];
+            echo "this ID : ".$Tab['IDCompte'];
+
+            return $this->_IDCompte;
+        }
+
+        public function GetIDCompte($Pseudo, $Attaque, $Defense, $Soin)
+        {
+            //echo "P : ".$Pseudo.", A : ".$Attaque.", D : ".$Defense.", S : ".$Soin;
+
+            $req = "SELECT `IDCompte`,`Nom`,`Attaque`,`Defense`,`Soin` FROM `perso` WHERE `Nom`= '$Pseudo' AND `Attaque`= $Attaque AND `Defense`= $Defense AND `Soin`= $Soin";
+            //SELECT `ID`,`Nom`,`Attaque`,`Defense`,`Soin` FROM `perso` WHERE `Nom`= 'Gros Chien' AND `Attaque`= 50 AND `Defense`= 10 AND `Soin`= 30
+            $reponse = $this->_BDD->query($req);
+            
+            $Tab = $reponse->fetch(); //
+            $this->_ID = $Tab['IDCompte'];
+
+            echo "this IDCompte : ".$Tab['ID'];
 
             return $this->_ID;
         }
