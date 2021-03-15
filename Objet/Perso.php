@@ -37,7 +37,7 @@
         $this->_Score = $Tab['Score'];
         $this->_IDCompte = $Tab['IDCompte'];
 
-        echo "Vie = ".$this->_Vie."IDCompte = ".$this->_IDCompte;
+        echo "ID = ".$this->_ID." Nom = ".$this->_Nom." Vie = ".$this->_Vie." Defense = ".$this->_Defense." Attaque = ".$this->_Attaque." Soin = ".$this->_Soin." Score = ".$this->_Score."IDCompte = ".$this->_IDCompte;
     }
 
 

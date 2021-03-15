@@ -71,12 +71,12 @@
                                 $Password = $_POST['password'];
                                 $Compte = New Compte($Username, $Password);
 
-                                $IDCompte = $Compte->GetIDPerso();
+                                $IDPerso = $Compte->GetIDPerso();
 
-                                echo "$ IDCompte = ".$IDCompte;
+                                echo "$ IDCompte = ".$IDPerso;
 
 
-                                $_SESSION['Connect']=$IDCompte;
+                                $_SESSION['Connect']=$IDPerso;
 
 
                                 //Refresh la page pour pouvoir acceder aux autres page.

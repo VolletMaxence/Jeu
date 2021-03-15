@@ -44,11 +44,11 @@
 
                     $IDPerso = $_SESSION['Connect'];
                     $IDCompte = $Perso->ReturnIDCompte();
-                    //$IDCompte = $Perso->Delete($IDPerso, $IDCompte);
+                    $IDCompte = $Perso->Delete($IDPerso, $IDCompte);
 
                     echo "Le compte d'ID ".$IDCompte." et le Perso d'ID ".$IDPerso. "Ont été supprimé";
-                    //session_destroy();
-                    //echo "<script type='text/javascript'>document.location.replace('Acceuil.php');</script>";
+                    session_destroy();
+                    echo "<script type='text/javascript'>document.location.replace('Acceuil.php');</script>";
                 }
 
                 
