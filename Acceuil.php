@@ -26,6 +26,11 @@
                     <input type="submit" name="Deco" value='Se Déconnecter'>
                 </form>
             </div>
+            <div id="MenuUtilisateur">
+                <form method="POST" name="MenuUtilisateur">
+                    <input type="submit" name="MenuUtilisateur" value='Gérez votre compte'>
+                </form>
+            </div>
 
 
                 <?php
@@ -44,6 +49,9 @@
                 //Aller dans la page de combat
                 if (isset($_POST["Combat"])) {
                     echo "<script type='text/javascript'>document.location.replace('Combat.php');</script>";
+                }
+                if (isset($_POST["MenuUtilisateur"])) {
+                    echo "<script type='text/javascript'>document.location.replace('MenuUtilisateur.php');</script>";
                 }
 
 

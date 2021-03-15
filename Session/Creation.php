@@ -85,6 +85,8 @@
 
                             //Lié les 2 ID pour que l'utilisateur est toujours le meme perso
                             $CompteID = $_SESSION['Connect'];
+                            echo "ID COmpte : ".$PersoID;
+
 
                             $Perso->Liaison($PersoID, $CompteID);
 

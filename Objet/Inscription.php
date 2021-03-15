@@ -56,11 +56,11 @@
             $reponse = $this->_BDD->query($req);
             
             $Tab = $reponse->fetch(); //
-            $this->_ID = $Tab['IDCompte'];
+            $this->_ID = $Tab['ID'];
 
-            echo "this ID : ".$Tab['IDCompte'];
+            echo "this ID : ".$Tab['ID'];
 
-            return $this->_IDCompte;
+            return $Tab['ID'];
         }
 
         public function GetIDCompte($Pseudo, $Attaque, $Defense, $Soin)

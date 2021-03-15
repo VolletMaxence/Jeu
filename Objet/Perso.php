@@ -36,6 +36,8 @@
         $this->_Soin = $Tab['Soin'];
         $this->_Score = $Tab['Score'];
         $this->_IDCompte = $Tab['IDCompte'];
+
+        echo "Vie = ".$this->_Vie."IDCompte = ".$this->_IDCompte;
     }
 
 
@@ -183,6 +185,27 @@
         $Score = $this->_Score + 1;
 
         $req = "UPDATE `perso` SET `Vie`= 100 WHERE `ID`=$ID"; 
+        $reponse = $this->_BDD->query($req);
+    }
+
+    //Renvoie l'ID du Compte lié
+    public function ReturnIDCompte()
+    {
+        echo "this->_IDCompte = ".$this->_IDCompte;
+
+        $IDCompte = $this->_IDCompte;
+        return $IDCompte;
+    }
+
+
+
+    //Delete le Perso et le Compte lié
+    public function Delete($ID, $IDPerso)
+    {
+        $req = "DELETE FROM `perso` WHERE `ID`=$ID";
+        $reponse = $this->_BDD->query($req);
+
+        $req = "DELETE FROM `utilisateur` WHERE `ID`=$IDPerso";
         $reponse = $this->_BDD->query($req);
     }
 
