@@ -113,6 +113,7 @@
                             {
                                 //retirer 1 au score
                                 $Perso->scoreMoins($_SESSION['Connect']);
+                                //Le score est désormais retirer des l'arrivé sur la page pour éviter les abuses avec les refresh
 
                                 //Supprimer la copi pour pas surcharger la base
                                 $Copie->SupprCopie();
